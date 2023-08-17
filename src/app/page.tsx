@@ -1,9 +1,10 @@
-import Image from 'next/image'
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch("https://api.github.com/repos/adesewa293/view-counter", { next: {revalidate:5}});
+  const data = await res.json();
   return (
     <main>
-      0
+      {data.stargazers_count}
     </main>
   )
 }
