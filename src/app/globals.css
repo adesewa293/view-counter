@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+main {
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
